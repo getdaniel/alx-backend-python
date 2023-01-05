@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from typing import Any, Mapping, Union, TypeVar
 """A type-annotaion of get-value."""
+from typing import Any, Mapping, Union, TypeVar
 
 
 T = TypeVar('T')

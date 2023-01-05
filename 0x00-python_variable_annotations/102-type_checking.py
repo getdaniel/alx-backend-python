@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from typing import List, Tuple
 """Use  mypy to validate zoom_array function."""
+from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
