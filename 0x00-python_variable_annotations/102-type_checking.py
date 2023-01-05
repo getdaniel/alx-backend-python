@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Use  mypy to validate zoom_array function."""
+""" Use  mypy to validate zoom_array function."""
 from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    """Return the zoomed value."""
+    """ Return the zoomed value of the array."""
     zoomed_in: List = [
         item for item in lst
         for i in range(int(factor))
