@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from typing import List
 """ A type-annotation of sum_list."""
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from typing import Iterable, List, Tuple, Sequence
 """ A type-annotation."""
 

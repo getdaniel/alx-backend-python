@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from typing import Callable
 """A type-annotation of make_multiplier."""
 
