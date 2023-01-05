@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import math
 """A tyepe-annotation of floor."""
+import math
 
 
 def floor(n: float) -> int:
