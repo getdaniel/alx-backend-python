@@ -4,7 +4,7 @@ from fixtures import TEST_PAYLOAD
 from parameterized import parameterized, parameterized_class
 from typing import Dict
 import unittest
-from unittest.mock import patch, MagicMock, PropertyMock
+from unittest.mock import patch, MagicMock, Mock, PropertyMock
 from client import GithubOrgClient
 
 
@@ -120,6 +120,7 @@ class TestGithubOrgClient(unittest.TestCase):
 ])
 class TestIntegrationGithubOrgClient(unittest.TestCase):
     """ Integration Test: Fixture."""
+    @classmethod
     def setUpClass(cls) -> None:
         """ Return example payloads found in the fixtures."""
         route_payload = {
@@ -139,3 +140,17 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
     def tearDownClass(cls) -> None:
         """ Stop the patcher."""
         cls.get_patcher.stop()
+
+    def test_public_repos(self) -> None:
+        """Tests the `public_repos` method."""
+        self.assertEqual(
+            GithubOrgClient("google").public_repos(),
+            self.expected_repos,
+        )
+
+    def test_public_repos_with_license(self) -> None:
+        """Tests the `public_repos` method with a license."""
+        self.assertEqual(
+            GithubOrgClient("google").public_repos(license="apache-2.0"),
+            self.apache2_repos,
+        )
